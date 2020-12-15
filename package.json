@@ -2,8 +2,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "start": "mdx-deck src/index.mdx",
+    "build": "mdx-deck build src/index.mdx",
     "test": "echo \"there are no tests\""
   },
   "devDependencies": {
