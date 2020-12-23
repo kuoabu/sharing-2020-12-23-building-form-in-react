@@ -1,14 +1,21 @@
 {
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "scripts": {
     "start": "mdx-deck src/index.mdx",
-    "build": "mdx-deck build src/index.mdx",
-    "test": "echo \"there are no tests\""
+    "clean": "rm -rf .cache build public",
+    "build": "npm run clean && gatsby build --prefix-paths && mv public build",
+    "deploy": "npx gh-pages --dist ./build --branch gh-pages"
   },
   "devDependencies": {
     "code-surfer": "3.1.0",
     "mdx-deck": "3.0.13"
   },
-  "name": "2020-12-15-form"
+  "name": "sharing-2020-12-23-building-form-in-react",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "gatsby": "^2.29.1",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-theme-mdx-deck": "^4.1.0"
+  }
 }
